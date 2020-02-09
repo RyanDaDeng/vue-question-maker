@@ -4,7 +4,7 @@ Simple Personal Library - MIT
 
 ## DEMO
 
-<img src="https://github.com/RyanDaDeng/vue-scheduler-component/blob/master/demo_scheduler.gif"/>
+<img src="https://github.com/RyanDaDeng/vue-question-maker/blob/master/question_maker.gif"/>
 
 ## Installation
 
