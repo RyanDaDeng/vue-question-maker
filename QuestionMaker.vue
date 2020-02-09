@@ -6,7 +6,7 @@
                        class="mb-3"
                        :prepend="'Question '+ (key+1) "
         >
-            <b-form-input :value="question.subject" required></b-form-input>
+            <b-form-input :value="question.subject" required @change="changeQuestion(question,$event)"></b-form-input>
             <b-input-group-append>
                 <b-button size="sm" text="Button" variant="danger" @click="removeQuestion(question)"
                           :disabled="questionLength === 1">
@@ -73,12 +73,12 @@
         computed: {
             questionLength() {
                 return this.questions.length;
-            },
-            sortedQuestions() {
-                this.questions.sort((x, y) => x.sort - y.sort);
             }
         },
         methods: {
+            changeQuestion(question, value) {
+                question.subject = value;
+            },
             sortQuestions() {
                 this.questions.sort((x, y) => x.sort - y.sort);
             },
@@ -96,7 +96,10 @@
             },
             removeQuestion(question) {
                 let index = this.questions.indexOf(question);
+                console.log(index);
+                console.log(this.questions);
                 this.questions.splice(index, 1);
+                console.log(this.questions);
             },
             resetQuestion() {
                 while (this.questions.length) {
