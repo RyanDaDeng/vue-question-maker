@@ -19,11 +19,13 @@ Simple Personal Library - MIT
 ## Usage
 
 ````vue
-  <question-maker :questions.sync="this.questions" ></question-maker>
+  <question-maker :questions.sync="this.questions" :limit="5"></question-maker>
  ````
-## API
+## APIs
 
 #### Props
+
+required
 ````js
   questions: [
                         {
@@ -41,6 +43,11 @@ Simple Personal Library - MIT
                     ]
 ````
 
+optional
+````js
+
+limit: 5
+````
 
 
 ### License
